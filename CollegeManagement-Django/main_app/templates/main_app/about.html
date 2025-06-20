@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About - College Management System</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Static Files -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'dist/css/main.css' %}" rel="stylesheet">
+ 
+</head>
+
+<body class="about-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <img src="{% static 'dist/img/logo.jpg' %}" alt="" style="max-width: 100%; height:75px;">
+      <a href="/" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">College Management System</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'about' %}" class="active">About</a></li>
+          <li><a href="{% url 'login_page' %}">Login</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="/contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <section id="hero" class="hero section dark-background">
+    <img src="{% static 'dist/img/clg.png.jpg' %}" alt="College Image" data-aos="fade-in" style="width:100%;">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>About Our College Management System</h2>
+        <p>Our College Management System is designed to streamline and automate various administrative and academic processes within the college.</p>
+
+        <!-- Key Features -->
+        <h3>Key Features:</h3>
+        <ul>
+          <li>Student Information Management</li>
+          <li>Course Management</li>
+          <li>Attendance Tracking</li>
+          <li>Examination and Grading</li>
+          <li>Reporting and Analytics</li>
+        </ul>
+
+        <!-- Benefits -->
+        <h3>Benefits:</h3>
+        <ul>
+          <li><strong>For Students:</strong> Easy access to course materials, grades, and important announcements.</li>
+          <li><strong>For Faculty:</strong> Simplified attendance tracking, grading, and communication with students.</li>
+          <li><strong>For Administrators:</strong> Improved data management, reporting, and overall efficiency.</li>
+        </ul>
+
+        <!-- Mission -->
+        <p>Our mission is to provide a user-friendly platform for managing all aspects of college administration, academics, and student services.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/" class="logo d-flex align-items-center">
+            <span class="sitename">College Management</span>
+          </a>
+          <!-- Contact Info -->
+          <div class="footer-contact pt-3">
+            <p>Balaji Institute Of Technology & Science</p>
+            <p>Narsampet, 506331</p>
+            <p><strong>Phone:</strong> +91 9390233476</p>
+            <p><strong>Email:</strong> collegemanagement@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'dist/js/main.js' %}"></script>
+
+</body>
+
+</html>

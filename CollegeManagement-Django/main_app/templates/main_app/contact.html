@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <title>Contact Us - College Management System</title>
+ <meta name="description" content="Contact us for any inquiries.">
+ <meta name="keywords" content="college, management, contact, inquiry">
+
+ <!-- Favicons -->
+ <link href="{% static 'img/favicon.png' %}" rel="icon">
+ <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com" rel="preconnect">
+ <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+ rel="stylesheet">
+
+ <!-- Vendor CSS Files -->
+ <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+ <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+ <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+ <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+ <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+ <!-- Main CSS File -->
+ <link href="{% static 'dist/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center sticky-top">
+ <div class="container-fluid container-xl position-relative d-flex align-items-center">
+ <img src="{% static 'dist/img/logo.jpg' %}" alt="" data-aos="fade-in" style="max-width: 100%; height:75px;">
+
+ <a href="/" class="logo d-flex align-items-center me-auto">
+
+ <h1 class="sitename">College Management System</h1>
+ </a>
+
+ <nav id="navmenu" class="navmenu">
+ <ul>
+ <li><a href="/">Home</a></li>
+ <li><a href="{% url 'about' %}">About</a></li>
+ <li><a href="{% url 'login_page' %}">Login</a></li>
+ <li><a href="{% url 'contact' %}" class="active">Contact</a>
+ </ul>
+ <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+ </nav>
+
+ </div>
+ </header>
+ <!-- End Header -->
+
+ <main id="main">
+
+ <!-- ======= Contact Section ======= -->
+ <section id="contact" class="contact">
+ <div class="container position-relative">
+
+ <div class="row gy-4 d-flex justify-content-center">
+
+ <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up">
+
+<h1>Contact Us</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+ <div class="text-center"><button type="submit">Send Message</button></div>
+ </form>
+ </div><!-- End Contact Form -->
+
+ <div class="col-lg-4 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+
+ <div class="info-item d-flex">
+ <i class="bi bi-geo-alt flex-shrink-0"></i>
+ <div>
+ <h4>Location:</h4>
+ <p>Balaji Institute Of Technology & Science, Narsampet, 506331</p>
+ </div>
+ </div><!-- End Info Item -->
+
+ <div class="info-item d-flex">
+ <i class="bi bi-envelope flex-shrink-0"></i>
+ <div>
+ <h4>Email:</h4>
+ <p>collegeManagement@gmail.com</p>
+ </div>
+ </div><!-- End Info Item -->
+
+ <div class="info-item d-flex">
+ <i class="bi bi-phone flex-shrink-0"></i>
+ <div>
+ <h4>Call:</h4>
+ <p>+91 9390233476</p>
+ </div>
+ </div><!-- End Info Item -->
+
+ <div class="info-item d-flex">
+ <i class="bi bi-clock flex-shrink-0"></i>
+ <div>
+ <h4>Open Hours:</h4>
+ <p>Mon-Fri: 9AM - 5PM</p>
+ </div>
+ </div><!-- End Info Item -->
+
+ </div><!-- End Contact Info -->
+
+ </div>
+
+ </div>
+ </section><!-- End Contact Section -->
+
+ </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer position-relative">
+
+ <div class="container footer-top">
+ <div class="row gy-4">
+ <div class="col-lg-4 col-md-6 footer-about">
+ <a href="home.html" class="logo d-flex align-items-center">
+ <span class="sitename">College Management </span>
+ </a>
+ <div class="footer-contact pt-3">
+ <p>Balaji Institute Of Technology & Science</p>
+ <p>Narsampet, 506331</p>
+ <p class="mt-3"><strong>Phone:</strong> <span>+91 9390233476</span></p>
+ <p><strong>Email:</strong> <span>collegemanagement@gmail.com</span></p>
+ </div>
+
+ </div>
+
+
+
+
+ </form>
+ </div>
+
+ </div>
+ </div>
+
+
+ </div>
+
+ </footer>
+ <!-- End Footer -->
+
+ <!-- Scroll Top -->
+ <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ <!-- Preloader -->
+ <div id="preloader"></div>
+
+ <!-- Vendor JS Files -->
+ <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+ <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+ <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+ <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+ <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+ <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+ <!-- Main JS File -->
+ <script src="{% static 'dist/js/main.js' %}"></script>
+
+</body>
+
+</html>
